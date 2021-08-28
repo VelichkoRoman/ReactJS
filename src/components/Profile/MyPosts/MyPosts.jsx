@@ -9,11 +9,9 @@ const MyPosts = () => {
             <div>
                 <textarea></textarea>
                 <button>Add posts</button>
-                <button>Remove</button>
             </div>
             <div className={pclass.posts}>
-                <Post />
-                <Post />
+                <Post message="Hi, it's first message from react app" countLike="16" />
                 <Post />
             </div>
         </div>
