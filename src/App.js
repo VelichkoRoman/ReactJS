@@ -13,7 +13,7 @@ import Settings from './components/Settings/Settings';
 
 
 
-const App = () => {
+const App = (props) => {
   return (
     <div className='app-wrapper'>
       <Header />

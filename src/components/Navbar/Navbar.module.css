@@ -4,17 +4,23 @@
   border-radius: 5px;
   overflow: hidden;
   margin-top: 5px;
+  padding-top: 20px;
 }
 
 .item {
   text-align: center;
   margin-top: 10px;
-  color: #ffffff;
   border: 1px solid #f0b4b4;
   border-radius: 20%;
   background-color: darkgoldenrod;
 }
 
-.item.active {
+.item a{
+  color: #ffffff;
+  text-decoration-line: none;
+}
+
+
+.item a.activeLink {
   color: gold;
 }
