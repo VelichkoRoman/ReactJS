@@ -15,19 +15,19 @@ import Settings from './components/Settings/Settings';
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <div className='app-wrapper'>
-        <Header />
+    <div className='app-wrapper'>
+      <Header />
+      <BrowserRouter>
         <Navbar />
-        <div class = 'app-wrapper-content'>
-          <Route path="/dialogs" component={Dialogs}/>
-          <Route path="/profile" component={Profile}/>
-          <Route path="/news" component={News}/>
-          <Route path="/music" component={Music}/>
-          <Route path="/settings" component={Settings}/>
+        <div class='app-wrapper-content'>
+          <Route path="/profile" component={Profile} />
+          <Route path="/dialogs" component={Dialogs} />
+          <Route path="/news" component={News} />
+          <Route path="/music" component={Music} />
+          <Route path="/settings" component={Settings} />
         </div>
-      </div>
-    </BrowserRouter>
+      </BrowserRouter>
+    </div>
   );
 }
 

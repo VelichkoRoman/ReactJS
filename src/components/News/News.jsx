@@ -1,9 +1,9 @@
 import React from 'react';
-// import s from './Dialogs.module.css';
+import s from './News.module.css';
 
 const News = (props) => {
     return (
-        <div >
+        <div className={s.news}>
             News
         </div>
     )
