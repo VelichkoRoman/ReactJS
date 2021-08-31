@@ -4,7 +4,7 @@ import pclass from "./Profile.module.css";
 
 const Profile = () => {
     return (
-        <div className = { pclass.content }>
+        <div>
             <div>
                <img src='https://toursbooked.com/sites/default/files/product_image/IMG-world-novo-cinema-dubai_0.jpg'></img>
             </div>

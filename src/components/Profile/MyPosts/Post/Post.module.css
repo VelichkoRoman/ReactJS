@@ -9,7 +9,12 @@
   
 }
 
-span {
+.likesCount {
  font-weight: 800;
  color: rgb(194, 11, 48);
+}
+
+.textLikes {
+  font-weight: 600;
+  color: green;
 }

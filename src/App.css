@@ -13,6 +13,18 @@
 
 }
 
+.app-wrapper-content {
+  grid-area: c;
+  background-color: cornflowerblue;
+  margin-top: 5px;
+  margin-left: 6px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.app-wrapper-content img{
+  /* width: 100%; */
+}
+
 
 
 /* 
