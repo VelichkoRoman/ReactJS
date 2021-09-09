@@ -24,3 +24,62 @@
 .item a.activeLink {
   color: gold;
 }
+
+/* .sidebar {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 20px;
+    font-size: xx-large;
+    font-family: cursive;
+}
+
+.sidebar a{
+  color: #ffffff;
+  text-decoration-line: none;
+} */
+
+p {
+  color: #ffffff;
+  text-align: center;
+  /* padding-top: 30px; */
+  /* padding-bottom: 20px; */
+    font-size: xx-large;
+    font-family: cursive;
+}
+
+.photo {
+  /* width: 30%; */
+  width: 50px;
+  height: 50px;
+  border: 2px solid rgba(184, 136, 5, 0.5);
+  border-radius: 15%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.photo img {
+  height: 50px;
+  width: 50px;
+  /* transform: translateY(5px); */
+  align-items: center;
+  text-align: center;
+}
+
+.photoAvatarElements {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* margin: 20px; */
+  padding: 15px;
+  /* margin: a auto; */
+
+  border-radius: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  /* background-color: white; */
+}
+
+.nickname {
+  color:rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  font-weight: 800;
+}

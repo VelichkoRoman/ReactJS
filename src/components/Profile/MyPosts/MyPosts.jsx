@@ -3,7 +3,7 @@ import pclass from "./MyPosts.module.css";
 import Post from './Post/Post';
 
 const MyPosts = (props) => {
-
+// debugger;
     let postItems = props.posts.map (p => <Post message={p.message} likesCount={p.likesCount} textLikes='likes' /> )
 
     return (
