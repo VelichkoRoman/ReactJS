@@ -45,6 +45,7 @@ p {
   /* padding-bottom: 20px; */
     font-size: xx-large;
     font-family: cursive;
+    margin-bottom: 10px;
 }
 
 .photo {
@@ -74,7 +75,7 @@ p {
   /* margin: a auto; */
 
   border-radius: 10px;
-  border: 2px solid rgba(0, 0, 0, 0.2);
+  /* border: 2px solid rgba(0, 0, 0, 0.2); */
   /* background-color: white; */
 }
 

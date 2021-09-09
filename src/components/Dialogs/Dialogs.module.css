@@ -5,7 +5,14 @@
 
 .dialogsItems {
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
 
+}
+.user {
+    padding: 10px;
 }
 
 .dialogsItems .active {
@@ -20,4 +27,11 @@
 
 .message {
     color:white;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
 }

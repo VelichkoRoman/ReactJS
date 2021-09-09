@@ -12,11 +12,11 @@ let state = {
     },
     dialogsPage: {
         dialogs: [
-            {id: 1, name: 'Romich'},
-            {id: 2, name: 'Andrey'},
-            {id: 3, name: 'Sveta'},
-            {id: 4, name: 'Anton'},
-            {id: 5, name: 'Anna'},
+            {id: 1, name: 'Romich', avatar: require("../img/man.svg").default},
+            {id: 2, name: 'Andrey', avatar: require("../img/man.svg").default},
+            {id: 3, name: 'Sveta', avatar: require("../img/woman.svg").default },
+            {id: 4, name: 'Anton', avatar: require("../img/man.svg").default},
+            {id: 5, name: 'Anna', avatar: require("../img/girl.svg").default},
         ],
         messages: [
             {id: 1, message: 'hi'},
