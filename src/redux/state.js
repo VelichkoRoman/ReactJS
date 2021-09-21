@@ -1,6 +1,4 @@
 let store = {
-
-    
     _state: {
         profilePage: {
             posts: [
@@ -45,31 +43,49 @@ let store = {
             // ],
         // },
     },
+    _callSubscriber() {
+        console.log('State changed');
+    },
     getState() {
         // debugger;
         return this._state;
     },
-    _callSubscriber() {
-        console.log('State changed');
-    },
-    addPost() {
-        debugger;
-        let newPost = {
-            id: 5,
-            message: this._state.profilePage.newPostText,
-            likesCount:0,
-        };
-        this._state.profilePage.posts.push(newPost);
-        this._state.profilePage.newPostText = '';
-        this._callSubscriber(this._state);
-    },
-    updateNewPostText(newtext) {
-        // debugger;
-        this._state.profilePage.newPostText = newtext;
-        this._callSubscriber(this._state);
-    },
     subscribe(observer) {
         this._callSubscriber = observer;
+    },
+    // addPost() {
+    //     debugger;
+    //     let newPost = {
+    //         id: 5,
+    //         message: this._state.profilePage.newPostText,
+    //         likesCount:0,
+    //     };
+    //     this._state.profilePage.posts.push(newPost);
+    //     this._state.profilePage.newPostText = '';
+    //     this._callSubscriber(this._state);
+    // },
+    // updateNewPostText(newtext) {
+    //     // debugger;
+    //     this._state.profilePage.newPostText = newtext;
+    //     this._callSubscriber(this._state);
+    // },
+    dispatch(action) {
+        // debugger;
+        if (action.type === 'ADD-POST'){
+            // debugger;
+            let newPost = {
+                id: 5,
+                message: this._state.profilePage.newPostText,
+                likesCount:0,
+            };
+            this._state.profilePage.posts.push(newPost);
+            this._state.profilePage.newPostText = '';
+            this._callSubscriber(this._state);
+        } else if (action.type === 'UPDATE-NEW-POST-TEXT') {
+            this._state.profilePage.newPostText = action.newText;
+            this._callSubscriber(this._state);
+        }
+
     },
     addMessage() {
         // debugger;
@@ -181,5 +197,5 @@ let store = {
 
 // export default state;
 export default store;
-window._store=store;
+window.store = store;
 

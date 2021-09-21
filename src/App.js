@@ -21,12 +21,11 @@ const App = (props) => {
         <Route path = "/profile" 
           render = { () => <Profile 
             profilePage = { props.state.profilePage } 
-            addPost={store.addPost}
-            updateNewPostText={props.updateNewPostText} />} />
+            dispatch={props.dispatch} />} />
         <Route path = "/dialogs" 
           render={ () => <Dialogs 
             state = { props.state.dialogsPage } 
-            addMessage={store.addMessage.bind(store)}
+            addMessage={props.addMessage}
             updateNewMessageText={props.state.updateNewMessageText}/>} />
         <Route path = "/news" render = { () => <News />} />
         <Route path = "/music" render = { () => <Music />} />
