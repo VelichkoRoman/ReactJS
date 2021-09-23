@@ -5,7 +5,7 @@ import classes from "./Navbar.module.css";
 const Navbar = (props) => {
     // debugger;
 
-    const photoAvatarElements = props.state.sideBar.map( s => {
+    const photoAvatarElements = props.state.sideBar.ava.map( s => {
         return (
             <div>  
                 <div className = { classes.photo }>

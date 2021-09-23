@@ -10,7 +10,7 @@ import Navbar from './components/Navbar/Navbar';
 import News from './components/News/News';
 import Profile from './components/Profile/Profile';
 import Settings from './components/Settings/Settings';
-import store, { addMessage, addPost } from './redux/state';
+import store, { addMessage, addPost } from './redux/store';
 const App = (props) => {
 
   return (
@@ -24,9 +24,13 @@ const App = (props) => {
             dispatch={props.dispatch} />} />
         <Route path = "/dialogs" 
           render={ () => <Dialogs 
-            state = { props.state.dialogsPage } 
-            addMessage={props.addMessage}
-            updateNewMessageText={props.state.updateNewMessageText}/>} />
+            store ={props.store}
+            dialogsPage = {props.state.dialogsPage}
+            // state = { props.state.dialogsPage } 
+            // dispatch={props.dispatch}
+            // addMessage={props.addMessage}
+            // updateNewMessageText={props.state.updateNewMessageText}
+            />} />
         <Route path = "/news" render = { () => <News />} />
         <Route path = "/music" render = { () => <Music />} />
         <Route path = "/settings" render = { () => <Settings />} />
