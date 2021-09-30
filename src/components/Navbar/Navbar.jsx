@@ -5,19 +5,19 @@ import classes from "./Navbar.module.css";
 const Navbar = (props) => {
     // debugger;
 
-    const photoAvatarElements = props.state.sideBar.ava.map( s => {
-        return (
-            <div>  
-                <div className = { classes.photo }>
-                    <img src = { s.photo } alt="" />
-                </div>
-                <div>
-                    <p className={classes.nickname}>{s.nickname}</p>
-                </div>
-            </div>
-        )
+    // const photoAvatarElements = props.state.sideBar.ava.map( s => {
+    //     return (
+    //         <div>  
+    //             <div className = { classes.photo }>
+    //                 <img src = { s.photo } alt="" />
+    //             </div>
+    //             <div>
+    //                 <p className={classes.nickname}>{s.nickname}</p>
+    //             </div>
+    //         </div>
+    //     )
             
-    }) 
+    // }) 
 
     return (
         <nav className = { classes.nav }>
@@ -39,10 +39,10 @@ const Navbar = (props) => {
            
 
 
-            <p>Friends: </p>
+            {/* <p>Friends: </p>
             <div className={classes.photoAvatarElements}>
                 {photoAvatarElements}
-            </div>
+            </div> */}
         </nav>
     );
 }

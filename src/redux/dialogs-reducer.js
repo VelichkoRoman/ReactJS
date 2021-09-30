@@ -5,7 +5,7 @@ let initialState = {
         dialogs: [
             {id: 1, name: 'Romich', avatar: require("../img/man.svg").default},
             {id: 2, name: 'Andrey', avatar: require("../img/man.svg").default},
-            {id: 3, name: 'Sveta', avatar: require("../img/woman.svg").default },
+            {id: 3, name: 'Sveta', avatar: require("../img/woman.svg").default},
             {id: 4, name: 'Anton', avatar: require("../img/man.svg").default},
             {id: 5, name: 'Anna', avatar: require("../img/girl.svg").default},
         ],
@@ -22,19 +22,33 @@ let initialState = {
 
 const dialogsReducer = (state = initialState, action) => {
    
+// debugger
+    let stateCopy;
+
     switch (action.type) {
         case SEND_MESSAGE:
             let body = state.newMessageBody;
-            state.newMessageBody = '';
-            state.messages.push({id:6, message: body});
-            
-            return state;
+            return {...state, 
+                    newMessageBody: '',
+                    messages:[...state.messages, {id:6, message: body}],
+                    
+            }
+                        
+            // stateCopy = {...state, 
+            //                 messages:[...state.messages],
+            // };
+            // stateCopy.newMessageBody = '';
+            // stateCopy.messages.push({id:6, message: body});
 
+            // return stateCopy;
+        
         case UPDATE_NEW_MESSAGE_BODY:
-            state.newMessageBody = action.body;
-            
-            return state;
-
+            return {...state, newMessageBody:action.body};
+            // stateCopy = {...state};
+            // stateCopy.newMessageBody = action.body;
+           
+            // return stateCopy;
+        
         default:
             return state;
     }
