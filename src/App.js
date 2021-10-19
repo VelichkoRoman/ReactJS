@@ -4,6 +4,7 @@ import { Route, BrowserRouter } from 'react-router-dom';
 
 import './App.css';
 import DialogsContainer from './components/Dialogs/DialogsContainer';
+import ErrorPage from './components/Error/ErrorPage';
 import Header from './components/Header/Header';
 import Music from './components/Music/Music';
 import Navbar from './components/Navbar/Navbar';
@@ -56,6 +57,7 @@ const App = (props) => {
           <Route path = "/music" render = { () => <Music />} />
           <Route path = "/settings" render = { () => <Settings />} />
           <Route path = "/users" render = { () => <UsersContainer />} />
+
       </div>
     </div>
   );
