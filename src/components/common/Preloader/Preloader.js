@@ -1,3 +1,4 @@
+import React from 'react';
 import preloader from '../../../Assets/Images/load.gif';
 
 

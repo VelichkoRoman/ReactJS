@@ -4,10 +4,9 @@ import pclass from "./Profile.module.css";
 import ProfileInfo from './ProfileInfo/ProfileInfo';
 
 const Profile = (props) => {
-    // debugger
     return (
         <div>
-            <ProfileInfo />
+            <ProfileInfo profile={props.profile}/>
             <MyPostsContainer 
                             //   posts={props.profilePage.posts} 
                             //   newPostText = {props.profilePage.newPostText}

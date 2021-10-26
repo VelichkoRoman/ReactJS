@@ -9,7 +9,7 @@ import Header from './components/Header/Header';
 import Music from './components/Music/Music';
 import Navbar from './components/Navbar/Navbar';
 import News from './components/News/News';
-import Profile from './components/Profile/Profile';
+import ProfileContainer from './components/Profile/ProfileContainer';
 import Settings from './components/Settings/Settings';
 import UsersContainer from './components/Users/UsersContainer';
 import store, { addMessage, addPost } from './redux/store';
@@ -39,7 +39,7 @@ const App = (props) => {
             <button onClick={()=>decrement()}>-</button>
           </div> */}
           <Route path = "/profile" 
-            render = { () => <Profile 
+            render = { () => <ProfileContainer 
               // profilePage = { props.state.profilePage } 
               // dispatch={props.dispatch} 
               // store = {props.store}

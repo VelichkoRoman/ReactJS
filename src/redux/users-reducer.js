@@ -90,15 +90,21 @@ const usersReducer = (state = initialState, action) => {
 
 // ЭКШЕН КРЕАТОРЫ создают объект с принимаемым в себя типом экшена со своими свойствами 
 // функции которые возвращают экшен объект.
-export const followActionCreator = (userId) => ({type: FOLLOW, userId});
-export const unfollowActionCreator = (userId) => ({type: UNFOLLOW, userId});
-// засеттать всех юзеров
-export const setUsersActionCreator = (users) => ({type: SET_USERS, users});
-export const setCurrentPageActionCreator = (currentPage) => ({type: SET_CURRENT_PAGE, currentPage});
-export const setTotalUsersCountActionCreator = (totalUsersCount) => ({type: SET_TOTAL_USERS_COUNT, count: totalUsersCount});
-export const setIsFetchingActionCreator = (isFetching) => ({type: TOGGLE_IS_FETCHING, isFetching});
 
+// export const followActionCreator = (userId) => ({type: FOLLOW, userId});
+// export const unfollowActionCreator = (userId) => ({type: UNFOLLOW, userId});
+// // засеттать всех юзеров
+// export const setUsersActionCreator = (users) => ({type: SET_USERS, users});
+// export const setCurrentPageActionCreator = (currentPage) => ({type: SET_CURRENT_PAGE, currentPage});
+// export const setTotalUsersCountActionCreator = (totalUsersCount) => ({type: SET_TOTAL_USERS_COUNT, count: totalUsersCount});
+// export const setIsFetchingActionCreator = (isFetching) => ({type: TOGGLE_IS_FETCHING, isFetching});
 
-
+//Для упрщения кода, изменим имена экшен креаторов на более простые, из-за избавления функции  mapDispatchToProps в UserCantainer
+export const follow = (userId) => ({type: FOLLOW, userId});
+export const unfollow = (userId) => ({type: UNFOLLOW, userId});
+export const setUsers = (users) => ({type: SET_USERS, users});
+export const setCurrentPage = (currentPage) => ({type: SET_CURRENT_PAGE, currentPage});
+export const setTotalUsersCount = (totalUsersCount) => ({type: SET_TOTAL_USERS_COUNT, count: totalUsersCount});
+export const setIsFetching = (isFetching) => ({type: TOGGLE_IS_FETCHING, isFetching});
 
 export default usersReducer;
